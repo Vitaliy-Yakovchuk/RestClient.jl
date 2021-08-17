@@ -12,8 +12,10 @@ The macro emulates HTTP request:
 
 In the Julia REPL:
 ```julia-repl
-]add https://github.com/Vitaliy-Yakovchuk/RestClient.jl.git
+pkg> add https://github.com/Vitaliy-Yakovchuk/RestClient.jl.git
 ```
+
+(to get `pkg>` mode just press `]`)
 
 ## Supported methods:
 - GET
