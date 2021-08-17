@@ -8,6 +8,13 @@ The macro emulates HTTP request:
 - [Optional] Second+ lines (til empty line): headers
 - [Optional] Lines after the empty one: body
 
+## Installation
+
+In the Julia REPL:
+```julia-repl
+]add https://github.com/Vitaliy-Yakovchuk/RestClient.jl.git
+```
+
 ## Supported methods:
 - GET
 - POST
@@ -20,6 +27,7 @@ The macro emulates HTTP request:
 ### Simple get
 
 ```julia-repl
+julia> using RestClient
 julia> GET"http://httpbin.org/ip"
 HTTP.Messages.Response:
 """
@@ -40,6 +48,7 @@ Access-Control-Allow-Credentials: true
 ### Post with headers and body
 
 ```julia-repl
+julia> using RestClient
 julia> POST"""http://httpbin.org/post?arg1=value1&arg2=value2
 Content-Type: application/json;charset=utf-8
 
