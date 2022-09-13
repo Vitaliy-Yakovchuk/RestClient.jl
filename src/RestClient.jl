@@ -42,7 +42,7 @@ function make_request(method, data)
         end
     end
 
-    return HTTP.request(method, url, headers, body)
+    return String(HTTP.request(method, url, headers, body; require_ssl_verification = false).body)
 end
 
 function prepare_request(method, data)
